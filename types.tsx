@@ -1,17 +1,18 @@
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;
+  Description: undefined;
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Home: undefined;
+  Profile: undefined;
 };
 
 export type TabOneParamList = {
-  TabOneScreen: undefined;
+  Home: undefined;
 };
 
 export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+  Profile: undefined;
 };
