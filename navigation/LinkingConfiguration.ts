@@ -1,24 +1,34 @@
-import * as Linking from 'expo-linking';
+import * as Linking from "expo-linking";
 
 export default {
-  prefixes: [Linking.makeUrl('/')],
+  prefixes: [Linking.makeUrl("/")],
   config: {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Home: {
             screens: {
-              TabOneScreen: 'one',
+              HomeScreen: "home",
             },
           },
-          TabTwo: {
+          Profile: {
             screens: {
-              TabTwoScreen: 'two',
+              ProfileScreen: "user",
             },
           },
         },
       },
-      NotFound: '*',
+      Description: {
+        screens: {
+          DescriptionScreen: {
+            path: "manga/:id",
+            parse: {
+              id: "number",
+            },
+          },
+        },
+      },
+      NotFound: "*",
     },
   },
 };

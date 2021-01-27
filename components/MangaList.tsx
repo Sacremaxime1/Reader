@@ -5,6 +5,7 @@ import { Card } from "../components/Card";
 
 const ListContainer = styled.View`
   flex: 1;
+  align-items: center;
 `;
 
 export const MangaList = ({

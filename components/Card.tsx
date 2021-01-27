@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components/native";
 import { Dimensions, Image, ImageSourcePropType } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const windowWidth = (Dimensions.get("window").width * 30) / 100;
 const windowHeight = (Dimensions.get("window").height * 20) / 100;
 
-const CoverContainer = styled.View`
-  height: ${windowHeight};
-  width: ${windowWidth};
-`;
 const Cover = styled.Image`
   height: ${windowHeight};
   width: ${windowWidth};
@@ -23,10 +20,8 @@ const SubTitle = styled.Text`
   font-size: 10px;
 `;
 
-const Container = styled.View`
-  height: 200px;
-  width: 100px;
-  margin: 10px;
+const TouchableOpacity = styled.TouchableOpacity`
+  margin: 5px;
 `;
 
 export const Card = ({
@@ -38,11 +33,12 @@ export const Card = ({
   chapter: string;
   img: string;
 }) => {
+  const navigation = useNavigation();
   return (
-    <Container>
+    <TouchableOpacity onPress={() => navigation.navigate("Description")}>
       <Cover source={{ uri: img }}></Cover>
       <Title>{title}</Title>
       <SubTitle>{chapter}</SubTitle>
-    </Container>
+    </TouchableOpacity>
   );
 };
