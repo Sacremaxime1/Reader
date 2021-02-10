@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Dimensions, Image, ImageSourcePropType } from "react-native";
+import { Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const windowWidth = (Dimensions.get("window").width * 30) / 100;
