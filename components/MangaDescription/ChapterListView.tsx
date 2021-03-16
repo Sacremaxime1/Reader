@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components/native";
 import { FlatList } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const ChapterListView = styled.View``;
 
@@ -14,11 +15,12 @@ const ChapterTitle = styled.Text`
 `;
 
 export const ChapterList = () => {
+  const navigation = useNavigation();
   return (
     <FlatList
       data={MockData}
       renderItem={({ item }) => (
-        <Chapter>
+        <Chapter onPress={() => navigation.navigate("Reader")}>
           <ChapterTitle>
             chap. {item.chapter}: {item.title}
           </ChapterTitle>
