@@ -9,6 +9,7 @@ import { ColorSchemeName } from "react-native";
 
 import NotFoundScreen from "../screens/NotFoundScreen";
 import MangaDescription from "../screens/MangaDescription";
+import Reader from "../screens/Reader";
 import { RootStackParamList } from "../types";
 import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
@@ -44,6 +45,7 @@ function RootNavigator() {
         options={{ title: "Oops!" }}
       />
       <Stack.Screen name="Description" component={MangaDescription} />
+      <Stack.Screen name="Reader" component={Reader} />
     </Stack.Navigator>
   );
 }
